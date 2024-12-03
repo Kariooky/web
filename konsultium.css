@@ -1,141 +1,178 @@
+/* Color Palette */
+:root {
+  --primary-navy: #1A365D;      /* Deep navy blue */
+  --secondary-blue: #2C5282;    /* Slightly lighter blue */
+  --accent-blue: #3182CE;       /* Bright blue for highlights */
+  --light-blue: #E6F2FF;        /* Very light blue for backgrounds */
+  --text-dark: #2D3748;         /* Dark gray for text */
+  --text-light: #FFFFFF;        /* White for contrast */
+  --accent-color: #E6B800;      /* Golden accent color */
+}
+
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-  }
-  
-  /* Header */
-  header {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f0e68c;
-    color: white;
-  }
-  
-  header .logo img {
-    max-height: 50px;
-  }
-  
-  header nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  header nav ul li {
-    margin: 0 10px;
-  }
-  
-  header nav ul li a {
-    text-decoration: none;
-    color: #041c54;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  header nav ul li a:hover {
-    color: #f0e68c;
-  }
-  
-  /* Hero Section */
-  #hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: #f0e68c;
-    color: white;
-  }
-  
-  #hero .cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #004080;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  #hero .cta-button:hover {
-    background-color: #333;
-  }
-  
-  /* Section Styles */
-  section {
-    padding: 50px 20px;
-  }
-  
-  section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #004080;
-  }
-  
-  #services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
-  
-  .service {
-    text-align: center;
-    border: 1px solid #ddd;,
-,    padding: 20px;
-    border-radius: 5px;
-    transition: transform 0.3s;
-  }
-  
-  .service:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Contact Form */
-  form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  form label {
-    margin-top: 10px;
-  }
-  
-  form input, form textarea {
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  form button {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #004080;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  form button:hover {
-    background-color: #333;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #004080;
-    color: white;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--light-blue);
+}
+
+/* Header */
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--primary-navy);
+  color: var(--text-light);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header .logo img {
+  max-height: 50px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: bold;
+  transition: color 0.3s, transform 0.2s;
+}
+
+header nav ul li a:hover {
+  color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, var(--primary-navy), var(--secondary-blue));
+  color: var(--text-light);
+}
+
+#hero .cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+}
+
+#hero .cta-button:hover {
+  background-color: var(--secondary-blue);
+  color: var(--text-light);
+  transform: translateY(-3px);
+}
+
+/* Section Styles */
+section {
+  padding: 50px 20px;
+  background-color: var(--text-light);
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-navy);
+  font-size: 2.5rem;
+}
+
+#services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service {
+  text-align: center;
+  border: 1px solid var(--light-blue);
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: var(--text-light);
+}
+
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Contact Form */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--text-light);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+form label {
+  margin-top: 15px;
+  color: var(--primary-navy);
+  font-weight: bold;
+}
+
+form input, form textarea {
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid var(--light-blue);
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--primary-navy);
+  color: var(--text-light);
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+  background-color: var(--secondary-blue);
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-navy);
+  color: var(--text-light);
+}
